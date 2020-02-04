@@ -69,7 +69,10 @@
       width: 30%;
       margin-bottom: 30px;
       .btn {
-        .button(flex, center, 100%, #038080, white, 2rem, 5rem, 10px, 1.5rem 0)
+        .button(flex, center, 100%, @eastern-blue, white, 2rem, 5rem, 10px, 1.5rem 0);
+        &:hover {
+          .animate(@sandy-beach, @shark);
+        }
       }
     }
   }

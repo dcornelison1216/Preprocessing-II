@@ -1,5 +1,6 @@
 // Mixins in here
 
+// Missing buttons design mixin
 .button(@display, @justify, @width, @background, @text-color, @font, @height, @radius, @padding) {
     display: @display;
     justify-content: @justify;
@@ -10,4 +11,15 @@
     height: @height;
     border-radius: @radius;
     padding: @padding;
+}
+
+// Animation for 'Sign Me Up!' buttons
+.animate(@background, @text) {
+    background: @background;
+    color: @text;
+}
+
+// Animation for navbar
+.nav-animate(@color) {
+    color: @color;
 }
