@@ -1,4 +1,16 @@
 .home {
+  padding: 0 2rem;
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    .header-content {
+      border-top: 2px dashed #C0C0C0;
+      border-bottom: 2px dashed #C0C0C0;
+      h2 {
+        padding-top: 2rem;
+      }
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -56,6 +68,45 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn {
+        .button(flex, center, 100%, @eastern-blue, white, 2rem, 5rem, 10px, 1.5rem 0);
+        &:hover {
+          .animate(@sandy-beach, @shark);
+        }
+      }
     }
   }
 }// home
+
+@media @mobile {
+  .home {
+    .content-section {
+      flex-direction: column;
+      .text-content {
+        width: 100%;
+      }
+      .img-content {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .inverse-content {
+      flex-direction: column-reverse;
+    }
+    .content-destination {
+      justify-content: left;
+      margin: 0;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    .content-pick {
+      flex-direction: column;
+      .destination {
+        width: 75%;
+        margin: 15px auto;
+      }
+    }
+  }
+}

@@ -1,1 +1,40 @@
 // Navigation Styles here
+
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+    h1 {
+        margin-bottom: 1rem;
+        width: 50%;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        padding-top: 1rem;
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.7rem;
+            &:hover {
+                .nav-animate(@silver);
+            }
+        }
+    }
+}
+
+@media @mobile {
+    .navbar {
+        flex-direction: column;
+        h1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        nav {
+            width: 100%;
+        }
+    }
+}
+
